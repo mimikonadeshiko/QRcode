@@ -1,0 +1,22 @@
+<html>
+    <meta charset="utf-8">
+<head>
+	<meta charset="UTF-8">
+	<title>QRコード生成</title>
+    <input type="text" name="name" id="namenum">
+    <button onclick="generateQR()">ClickPLZ</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script>
+    function generateQR() {
+        var qrtext = namenum.value;
+        var utf8qrtext = unescape(encodeURIComponent(qrtext));
+        $("#img-qr").html("");
+        $("#img-qr").qrcode({text:utf8qrtext});
+    };
+    </script>
+</head>
+<body>
+<div id="img-qr"></div>
+</body>
+</html>
