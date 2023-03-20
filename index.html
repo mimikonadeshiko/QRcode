@@ -1,10 +1,12 @@
 <html>
-    <meta charset="utf-8">
 <head>
-    <script src="./jsQR.js"></script>
-    <script src="./main.js" defer></script>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<title>QRコード</title>
+    <h1>QRコード生成</h1>
+    <input type="text" name="name" id="namenum">
+    <button onclick="generateQR()">ClickPLZ</button>
+    <h1>            </h1>
+    <div id="img-qr"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
@@ -17,18 +19,4 @@
     };
     </script>
 </head>
-<body>
-    <h1>QRコード生成</h1>
-    <input type="text" name="name" id="namenum">
-    <button onclick="generateQR()">ClickPLZ</button>
-    <h1>        </h1>
-    <div id="img-qr"></div>
-    <br>
-    <h1>QRコード読み込み</h1>
-    <div id="wrapper">
-        <div id="msg">Unable to access video stream.</div>
-        <canvas id="canvas"></canvas>
-    </div>
-    
-</body>
 </html>
